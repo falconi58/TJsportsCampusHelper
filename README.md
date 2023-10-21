@@ -1,5 +1,5 @@
 # 同济高校体育一秒自动签到及自动跑步
-
+源作者[sorakadoaoR](https://github.com/sorakadoaoR)&nbsp;&nbsp;&nbsp;&nbsp; 源项目地址[sportCampusSignHelper](https://github.com/sorakadoaoR/sportCampusSignHelper)
 ## 自动签到简介
 
 由于刷锻时间和本人学习健身时间冲突，加上本人不喜欢被强制性的运动刷锻，在佬的基础上实现了一台电脑随时随地即可同济刷锻的手法，提供给同样时间安排冲突的同学使用，后面若有更新我也会及时随着佬更新fork，直到毕业不需要刷锻为止，但须知：文明其精神，野蛮其体魄。希望能帮tj学子节省出更多时间在别的有益的事情上
@@ -153,7 +153,8 @@ v2.1: 支持了最新版本（2.2.48）的iOS版本高校体育
 1.在电脑上下载雷神模拟器 <br>
 2.在浏览器上搜索fake location以及高校体育app进行下载（在雷神自带的应用中心中没有资源），其中fate location需要你充值9块一个月的会员专业版，
 fakelocation界面如下，设置路径，记得更改速度和循环次数，启动模拟
-![image](https://github.com/FAUST-BENCHOU/sportCampusSignHelper/assets/126341483/a0e60fef-7b06-4a47-ab24-bc5d456ee289)
+![image](https://github.com/FAUST-BENCHOU/TJsportsCampusHelper/assets/126341483/12d26aa8-81a0-4745-9330-dad9d46143f9)
+
 3.雷神模拟器中打开高校体育，开始跑步即可<br>
 #### 具体跑步刷锻操作可参考[b站一片叶](https://www.bilibili.com/video/BV1BX4y1G7u3/?spm_id_from=333.880.my_history.page.click&vd_source=2b5cff4a90d42367005014f1d6d11ec0)
 
