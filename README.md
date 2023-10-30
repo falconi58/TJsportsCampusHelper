@@ -161,7 +161,7 @@ v2.2：支持了iOS 2.2.49、Android2.9.9版本的高校体育
 fakelocation界面如下，设置路径，记得更改速度和循环次数，启动模拟
 ![image](https://github.com/FAUST-BENCHOU/TJsportsCampusHelper/assets/126341483/12d26aa8-81a0-4745-9330-dad9d46143f9)
 
-3.雷神模拟器中打开高校体育，开始跑步即可<br>
+3.雷神模拟器中打开高校体育，开始跑步即可（需要注意地图上是否已经出现途经点，没有途经点出现的话结束跑步并重来一次就行）<br>
 #### 具体跑步刷锻操作可参考[b站一片叶](https://www.bilibili.com/video/BV1BX4y1G7u3/?spm_id_from=333.880.my_history.page.click&vd_source=2b5cff4a90d42367005014f1d6d11ec0)
 
 
