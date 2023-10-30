@@ -1,12 +1,13 @@
 import base64
 from gxtyLib import getAESHelper
+from urllib import parse
 
 if __name__ == "__main__":
     # 解密请求测试
     p = input("input platform(ios/android): ")
     aesHelper = getAESHelper(p)
     data = input("input data: ")
-    bb = base64.b64decode(data)
+    bb = base64.b64decode(parse.unquote(data))
     decrypted = aesHelper.decrypt(bb).decode('utf-8')
     print("decrypted: " + decrypted)
 
