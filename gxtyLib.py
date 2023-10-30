@@ -35,8 +35,8 @@ class AESHelper:
 class AndroidAESHelper(AESHelper):
     def __init__(self):
         super().__init__()
-        self.key = b'nO5Mm4zggvrbYyIJ'
-        self.iv = b'1111111111111111'
+        self.key = b'rDWV58oToS6Wx2qU'
+        self.iv = b'CCsq8Ik0bH6h4l3J'
 
     def encrypt(self, plaintext: bytes):
         backend = default_backend()
@@ -63,7 +63,7 @@ class AndroidAESHelper(AESHelper):
 
     def getSign(self, msg: str):
         # salt变了！
-        msg = 'nO5Mm4zggvrbYyIJ0zbnKkq2sdb~4KscsiscARpddata' + msg
+        msg = 'no32XZFSeXDmhfzpnVwPNCSCYklpjIIZdata' + msg
         hl = hashlib.md5()
         hl.update(msg.encode('ascii'))
         return hl.hexdigest()
@@ -123,14 +123,15 @@ class GXTYRequestHelper:
         self.aesHelper = aesHelper
         self.urlPrefix = urlPrefix
         if platform.lower() == 'android':
-            self.nowHeader = {'Content-Type': 'application/x-www-form-urlencoded',
+            self.nowHeader = {
+                              'Content-Type': 'application/x-www-form-urlencoded',
                               "Accept-Language": "zh-CN,zh;q=0.8",
                               "User-Agent": "okhttp-okgo/jeasonlzy",
-                              "X-Channel": "ru_huawei",
+                              "X-Channel": "ru_myapp",
                               "Packagename": "com.example.gita.gxty",
                               "Xxversionxx": "20180601",
-                              "Versionname": "2.9.8",
-                              "Versioncode": "519",
+                              "Versionname": "2.9.9",
+                              "Versioncode": "522",
                               "Platform": "android",
                               "E206b53e98e9ecc295427aa5e1a4c18b": "0,0,0,0,0,0",  # 这个是固定的
                               "Uuid": initUuid
@@ -140,7 +141,7 @@ class GXTYRequestHelper:
                               "Accept-Language": "zh-CN,zh;q=0.8",
                               "User-Agent": "CollegeSports2/2.2.48 (iPhone; iOS 17.0.1; Scale/3.00)",
                               "xxversionxx": "20180601",
-                              "versionname": "2.2.48",
+                              "versionname": "2.2.49",
                               "versioncode": "431",
                               "platform": "iOS",
                               "uuid": initUuid
