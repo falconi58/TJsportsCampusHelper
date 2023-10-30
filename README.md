@@ -141,7 +141,7 @@ sign算法为`md5(salt+"data"+JSON文本)`，salt值为`MITY@*TeYBBZrBAYrLCm8U.2
 
 高校体育使用`CCCrypt`方法进行加密，传递的`CCOption`是`0x3`，也就是`kCCOptionPKCS7Padding | kCCOptionECBMode`，**注意AES工作模式是ECB模式**，密钥为`OmZw5Vk9YRIctFbD`
 
-# 更新日志
+# 更新日志（2023.10.29）
 
 v1.0: 首次发布
 
