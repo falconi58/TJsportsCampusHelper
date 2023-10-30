@@ -115,29 +115,33 @@ Stream的使用教程可以参考[这个视频](https://www.bilibili.com/video/B
 
 ## 关于加密和签名
 
-以下结论均为脱壳+反编译得来，仅保证当前版本有效，推测服务端是是根据请求Header的Platform字段来决定使用哪个平台的加解密和签名算法
+以下结论均为脱壳+反编译得来，仅保证当前版本有效，推测服务端是是根据请求Header的Platform、versionCode字段来决定使用哪个平台的加解密和签名算法和哪个密钥
 
-## 安卓(高校体育版本号2.9.8)
+## 安卓(高校体育版本号2.9.9)
+
+请求头versionCode: 522
 
 ### sign算法
 
-sign算法没有太大变化，仍为`salt+"data"+JSON文本`，但是salt的值变为了`nO5Mm4zggvrbYyIJ0zbnKkq2sdb~4KscsiscARpd`
+sign算法为`md5(salt+"data"+JSON文本)`，salt值为`no32XZFSeXDmhfzpnVwPNCSCYklpjIIZ`
 
 ### 加密
 
-对于一些请求的data，新版用了AES/CBC/PKCS7Padding进行加密，**注意AES工作模式是CBC模式**，密钥为`nO5Mm4zggvrbYyIJ`，IV为`1111111111111111`
+对于一些请求的data，新版用了AES/CBC/PKCS7Padding进行加密，**注意AES工作模式是CBC模式**，密钥为`rDWV58oToS6Wx2qU`，IV为`CCsq8Ik0bH6h4l3J`
 
-## iOS(高校体育版本号2.2.48)
+## iOS(高校体育版本号2.2.49)
+
+请求头versionCode: 431
 
 ### sign算法
 
-sign算法没有太大变化，仍为`salt+"data"+JSON文本`，但是salt的值变为了`MITY@*TeYBBZrBAYrLCm8U.2Y+Pt0@vltP1U$.X$`
+sign算法为`md5(salt+"data"+JSON文本)`，salt值为`MITY@*TeYBBZrBAYrLCm8U.2Y+Pt0@vltP1U$.X$`
 
 ### 加密
 
 高校体育使用`CCCrypt`方法进行加密，传递的`CCOption`是`0x3`，也就是`kCCOptionPKCS7Padding | kCCOptionECBMode`，**注意AES工作模式是ECB模式**，密钥为`OmZw5Vk9YRIctFbD`
 
-## 更新日志
+# 更新日志
 
 v1.0: 首次发布
 
@@ -148,6 +152,8 @@ v1.2: 加入utoken登录方法
 v2.0: 支持了最新版本（2.9.8）的安卓版高校体育
 
 v2.1: 支持了最新版本（2.2.48）的iOS版本高校体育
+
+v2.2：支持了iOS 2.2.49、Android2.9.9版本的高校体育
 
 # 以下是如何远程跑步刷锻
 1.在电脑上下载雷神模拟器 <br>
